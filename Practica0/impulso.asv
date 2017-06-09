@@ -1,0 +1,32 @@
+clear all;
+close all;
+
+%Definimos la longitud que queremos de ceros:
+L= 30;
+
+%Definimos el eje X para representar:
+nn = 0:(L-1);
+
+%Para hacer el impulso, hacemos un vector de ceros y luego hacemos que el
+%primer elemento sea 1
+imp = zeros(L,1);
+imp(1) = 1;
+
+%Representamos como señal digital y como señal contínua
+figure(1);
+stem(nn,imp);
+figure(2);
+plot(nn,imp);
+
+%Para las señales digitañles es mejor stem que plot, porque plot lo toma
+%como una señal contínua y hace una pendiente hacia abajo que realmente no
+%se corresponde con lo que es el impulso unitario.
+
+%Vamos a hacer los ejercicios:
+
+A1 = 0.9;
+
+L = 20;
+R = -5;
+
+imp(-R) = 1;
